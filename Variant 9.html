@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Variant 9 </title>
+</head>
+
+
+
+
+
+<body>
+    <p> Variant 9 </p>
+<script>
+
+function getPairsByDay(dayOfWeek) {
+    const pairsSchedule = {
+        "понеділок": ["Дискретна математика", "Програмування", "Алгебра і Геометрія"],
+        "вівторок": ["Управління IT проєктами", "Управління ІТ проєктами", "Програмування", "Основи WEB програмування"],
+        "середа": ["Англійська мова", "Англійська мова", "Математичний Аналіз", "Математичний Аналіз"],
+        "четвер": ["Дискретна математика", "Програмування", "Алгебра і Геометрія"],
+        "п'ятниця": ["Основи WEB програмування", "Математичний Аналіз"],
+        "субота": ["Відпочинок"],
+        "неділя": ["Відпочинок"]
+    };
+
+    dayOfWeek = dayOfWeek.toLowerCase();
+
+    if (pairsSchedule.hasOwnProperty(dayOfWeek)) {
+        return pairsSchedule[dayOfWeek];
+    } else {
+        return "Немає такого дня.";
+    }
+}
+
+let day = "понеділок";
+let pairs = getPairsByDay(day);
+alert(`На ${day} такі пари - ${pairs.join(", ")}`);
+
+</script>
+</body>
